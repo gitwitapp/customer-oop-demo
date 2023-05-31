@@ -4,3 +4,6 @@ class Customer:
         self.age = age
         self.email = email
         self.address = address
+        self.orders = []
+        self.payments = []
+        self.reviews = []
