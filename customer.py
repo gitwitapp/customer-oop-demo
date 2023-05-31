@@ -4,6 +4,11 @@ class Customer:
         self.age = age
         self.email = email
         self.address = address
-        self.orders = []
-        self.payments = []
-        self.reviews = []
+
+    def serialize(self):
+        return f"{self.name},{self.age},{self.email},{self.address}"
+
+    @staticmethod
+    def deserialize(s):
+        name, age, email, address = s.split(",")
+        return Customer(name, int(age), email, address)
