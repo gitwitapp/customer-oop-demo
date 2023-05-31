@@ -17,5 +17,13 @@ class TestCustomer(unittest.TestCase):
     def test_customer_address(self):
         self.assertEqual(self.customer.address, '123 Main St')
 
+    def test_serialize_deserialize(self):
+        s = self.customer.serialize()
+        c = Customer.deserialize(s)
+        self.assertEqual(self.customer.name, c.name)
+        self.assertEqual(self.customer.age, c.age)
+        self.assertEqual(self.customer.email, c.email)
+        self.assertEqual(self.customer.address, c.address)
+
 if __name__ == '__main__':
     unittest.main()
