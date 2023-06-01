@@ -1,6 +1,3 @@
-import unittest
-from customer import Customer
-
 class TestCustomer(unittest.TestCase):
     def setUp(self):
         self.customer = Customer('John Doe', 30, 'johndoe@example.com', '123 Main St')
@@ -24,6 +21,3 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(self.customer.age, c.age)
         self.assertEqual(self.customer.email, c.email)
         self.assertEqual(self.customer.address, c.address)
-
-if __name__ == '__main__':
-    unittest.main()
