@@ -12,3 +12,6 @@ class Customer:
     def deserialize(s):
         name, age, email, address = s.split(",")
         return Customer(name, int(age), email, address)
+self.orders = []
+self.payments = []
+self.reviews = []
